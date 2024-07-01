@@ -16,8 +16,8 @@ const PaymentForm = ({tid}) => {
             createAlertWithCallback('success','¡Pago completado!',`<p>El pago ha sido procesado con éxito.</p>
             <br/>
             Revisá el detalle en tu correo electronico.`,()=>{
-                fetch(`http://localhost:8080/api/email?tid=${tid}`);
-                window.location.replace('http://localhost:8080/productos');
+                fetch(`https://backend-production-e5d5.up.railway.app/api/email?tid=${tid}`);
+                window.location.replace('https://backend-production-e5d5.up.railway.app/productos');
             })
         } else {
             console.log(error);
